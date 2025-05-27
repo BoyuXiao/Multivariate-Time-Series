@@ -1,0 +1,28 @@
+Name	Test_size	Train_size	m	K
+ArticularyWordRecognition	300	275	144	9
+AtrialFibrillation	15	15	640	2	
+BasicMotions	40	40	100	6	
+Cricket	72	108	1197	6	
+DuckDuckGeese	50	50	270	1345	
+EigenWorms	131	128	17984	6	---------------------------------------
+Epilepsy	138	137	206	3	
+ERing	270	30	65	4	
+EthanolConcentration	263	261	1751	3	
+FaceDetection	3524	5890	62	144	--------------------------------（忽略掉）
+FingerMovements	100	316	50	28	
+HandMovementDirection	74	160	400	10	
+Handwriting	850	150	152	3	
+Heartbeat	205	204	405	61	
+Libras	180	180	45	2	
+LSST	2466	2459	36	6	-----------------------------
+MotorImagery	100	278	3000	64	
+NATOPS	180	180	51	24	
+PEMS-SF	173	267	144	963	----------------------------（忽略掉）
+PenDigits	3498	7494	8	2	------------------
+PhonemeSpectra	3353	3315	217	11	--------------（nan需要处理）
+RacketSports	152	151	30	6	
+SelfRegulationSCP1	293	268	896	6	
+SelfRegulationSCP2	180	200	1152	7	
+StandWalkJump	15	12	2500	4	
+UWaveGestureLibrary	320	120	315	3	
+
