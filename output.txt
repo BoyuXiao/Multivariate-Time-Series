@@ -7985,3 +7985,471 @@ UWaveGestureLibrary	0	0	0	0.870871	1.319	0	0	0	0	0	0	0	0	0	0	0	0
 UWaveGestureLibrary	0	0	0	0.78593	2.336	0	0	0	0	0	0	0	0	0	0	0	0
 UWaveGestureLibrary	0	0	0	0.62435	4.2	0	0	0	0	0	0	0	0	0	0	0	0
 
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ArticularyWordRecognition	0	0	0	0	0.533	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0	0.712	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0	1.123	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0	1.816	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0	3.558	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+AtrialFibrillation	0	0	0	0	0.003	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0	0.003	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0	0.013	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0	0.025	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0	0.054	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+BasicMotions	0	0	0	0	0.009	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0	0.007	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0	0.01	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0	0.012	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0	0.021	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Cricket	0	0	0	0	0.807	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0	2.195	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0	4.66	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0	10.611	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0	23.589	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+DuckDuckGeese	0	0	0	0	10.284	0	0	0	0	0	0	0	0	0	0	0	0
+DuckDuckGeese	0	0	0	0	13.381	0	0	0	0	0	0	0	0	0	0	0	0
+DuckDuckGeese	0	0	0	0	24.338	0	0	0	0	0	0	0	0	0	0	0	0
+DuckDuckGeese	0	0	0	0	41.327	0	0	0	0	0	0	0	0	0	0	0	0
+DuckDuckGeese	0	0	0	0	77.299	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Epilepsy	0	0	0	0	0.11	0	0	0	0	0	0	0	0	0	0	0	0
+Epilepsy	0	0	0	0	0.15	0	0	0	0	0	0	0	0	0	0	0	0
+Epilepsy	0	0	0	0	0.197	0	0	0	0	0	0	0	0	0	0	0	0
+Epilepsy	0	0	0	0	0.372	0	0	0	0	0	0	0	0	0	0	0	0
+Epilepsy	0	0	0	0	0.742	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ERing	0	0	0	0	0.015	0	0	0	0	0	0	0	0	0	0	0	0
+ERing	0	0	0	0	0.014	0	0	0	0	0	0	0	0	0	0	0	0
+ERing	0	0	0	0	0.02	0	0	0	0	0	0	0	0	0	0	0	0
+ERing	0	0	0	0	0.02	0	0	0	0	0	0	0	0	0	0	0	0
+ERing	0	0	0	0	0.033	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+EthanolConcentration	0	0	0	0	7.951	0	0	0	0	0	0	0	0	0	0	0	0
+EthanolConcentration	0	0	0	0	22.89	0	0	0	0	0	0	0	0	0	0	0	0
+EthanolConcentration	0	0	0	0	50.505	0	0	0	0	0	0	0	0	0	0	0	0
+EthanolConcentration	0	0	0	0	107.798	0	0	0	0	0	0	0	0	0	0	0	0
+EthanolConcentration	0	0	0	0	211.511	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+FingerMovements	0	0	0	0	0.277	0	0	0	0	0	0	0	0	0	0	0	0
+FingerMovements	0	0	0	0	0.272	0	0	0	0	0	0	0	0	0	0	0	0
+FingerMovements	0	0	0	0	0.357	0	0	0	0	0	0	0	0	0	0	0	0
+FingerMovements	0	0	0	0	0.379	0	0	0	0	0	0	0	0	0	0	0	0
+FingerMovements	0	0	0	0	0.543	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+HandMovementDirection	0	0	0	0	0.361	0	0	0	0	0	0	0	0	0	0	0	0
+HandMovementDirection	0	0	0	0	0.529	0	0	0	0	0	0	0	0	0	0	0	0
+HandMovementDirection	0	0	0	0	1.205	0	0	0	0	0	0	0	0	0	0	0	0
+HandMovementDirection	0	0	0	0	2.559	0	0	0	0	0	0	0	0	0	0	0	0
+HandMovementDirection	0	0	0	0	5.27	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Handwriting	0	0	0	0	0.293	0	0	0	0	0	0	0	0	0	0	0	0
+Handwriting	0	0	0	0	0.413	0	0	0	0	0	0	0	0	0	0	0	0
+Handwriting	0	0	0	0	0.611	0	0	0	0	0	0	0	0	0	0	0	0
+Handwriting	0	0	0	0	1.109	0	0	0	0	0	0	0	0	0	0	0	0
+Handwriting	0	0	0	0	2.217	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Heartbeat	0	0	0	0	9.869	0	0	0	0	0	0	0	0	0	0	0	0
+Heartbeat	0	0	0	0	13.632	0	0	0	0	0	0	0	0	0	0	0	0
+Heartbeat	0	0	0	0	28.753	0	0	0	0	0	0	0	0	0	0	0	0
+Heartbeat	0	0	0	0	62.94	0	0	0	0	0	0	0	0	0	0	0	0
+Heartbeat	0	0	0	0	138.911	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Libras	0	0	0	0	0.016	0	0	0	0	0	0	0	0	0	0	0	0
+Libras	0	0	0	0	0.014	0	0	0	0	0	0	0	0	0	0	0	0
+Libras	0	0	0	0	0.023	0	0	0	0	0	0	0	0	0	0	0	0
+Libras	0	0	0	0	0.029	0	0	0	0	0	0	0	0	0	0	0	0
+Libras	0	0	0	0	0.036	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+LSST	0	0	0	0	9.452	0	0	0	0	0	0	0	0	0	0	0	0
+LSST	0	0	0	0	9.515	0	0	0	0	0	0	0	0	0	0	0	0
+LSST	0	0	0	0	9.818	0	0	0	0	0	0	0	0	0	0	0	0
+LSST	0	0	0	0	11.933	0	0	0	0	0	0	0	0	0	0	0	0
+LSST	0	0	0	0	14.315	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+NATOPS	0	0	0	0	0.211	0	0	0	0	0	0	0	0	0	0	0	0
+NATOPS	0	0	0	0	0.239	0	0	0	0	0	0	0	0	0	0	0	0
+NATOPS	0	0	0	0	0.314	0	0	0	0	0	0	0	0	0	0	0	0
+NATOPS	0	0	0	0	0.353	0	0	0	0	0	0	0	0	0	0	0	0
+NATOPS	0	0	0	0	0.52	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+PenDigits	0	0	0	0	3.006	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0	2.96	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0	3.09	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0	3.026	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0	3.135	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+RacketSports	0	0	0	0	0.032	0	0	0	0	0	0	0	0	0	0	0	0
+RacketSports	0	0	0	0	0.03	0	0	0	0	0	0	0	0	0	0	0	0
+RacketSports	0	0	0	0	0.024	0	0	0	0	0	0	0	0	0	0	0	0
+RacketSports	0	0	0	0	0.033	0	0	0	0	0	0	0	0	0	0	0	0
+RacketSports	0	0	0	0	0.046	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+SelfRegulationSCP1	0	0	0	0	5.137	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP1	0	0	0	0	9.567	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP1	0	0	0	0	26.829	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP1	0	0	0	0	59.069	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP1	0	0	0	0	121.107	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+SelfRegulationSCP2	0	0	0	0	4.324	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP2	0	0	0	0	8.944	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP2	0	0	0	0	23.192	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP2	0	0	0	0	52.325	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP2	0	0	0	0	105.425	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+StandWalkJump	0	0	0	0	0.06	0	0	0	0	0	0	0	0	0	0	0	0
+StandWalkJump	0	0	0	0	0.131	0	0	0	0	0	0	0	0	0	0	0	0
+StandWalkJump	0	0	0	0	0.371	0	0	0	0	0	0	0	0	0	0	0	0
+StandWalkJump	0	0	0	0	0.751	0	0	0	0	0	0	0	0	0	0	0	0
+StandWalkJump	0	0	0	0	1.485	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+UWaveGestureLibrary	0	0	0	0	0.232	0	0	0	0	0	0	0	0	0	0	0	0
+UWaveGestureLibrary	0	0	0	0	0.327	0	0	0	0	0	0	0	0	0	0	0	0
+UWaveGestureLibrary	0	0	0	0	0.677	0	0	0	0	0	0	0	0	0	0	0	0
+UWaveGestureLibrary	0	0	0	0	1.447	0	0	0	0	0	0	0	0	0	0	0	0
+UWaveGestureLibrary	0	0	0	0	2.931	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ArticularyWordRecognition	0	0	0	1.2352	0.556	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	1.20805	0.699	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	1.11177	1.178	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	1.02167	1.94	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.928189	3.268	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+AtrialFibrillation	0	0	0	0.971245	0.006	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.957505	0.009	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.940547	0.021	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.866326	0.035	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.792148	0.067	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+BasicMotions	0	0	0	1.13942	0.007	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	1.06917	0.007	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	1.00663	0.009	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.96708	0.014	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.917413	0.024	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Cricket	0	0	0	1.1179	1.002	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	1.03388	1.898	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.919479	4.449	0	0	0	0	0	0	0	0	0	0	0	0
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ArticularyWordRecognition	0	0	0	0.969646	0.552	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.96357	0.661	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.935651	1.245	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.911919	1.936	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.87862	4.885	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+AtrialFibrillation	0	0	0	0.961165	0.006	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.952848	0.011	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.938241	0.022	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.864856	0.042	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.791386	0.077	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+BasicMotions	0	0	0	1.00142	0.009	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	1.00303	0.007	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.986684	0.013	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.957958	0.02	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.913321	0.038	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Cricket	0	0	0	0.938333	1.131	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.914684	2.073	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.85383	4.878	0	0	0	0	0	0	0	0	0	0	0	0
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ArticularyWordRecognition	0	0	0	0.969646	0.558	0	0	0	0	0	0	0	0	0	0	0	0
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ArticularyWordRecognition	0	0	0	0.92685	0.547	0	0	0	0	0	0	0	0	0	0	0	0
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ArticularyWordRecognition	0	0	0	0.960265	0.536	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.951962	0.663	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.915134	1.233	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.878049	2.472	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.819361	3.387	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+AtrialFibrillation	0	0	0	0.931047	0.007	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.888915	0.008	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.742062	0.021	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.553857	0.036	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.461672	0.069	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+BasicMotions	0	0	0	0.943671	0.006	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.913533	0.007	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.822458	0.012	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.752675	0.016	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.682307	0.024	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Cricket	0	0	0	0.934315	0.991	0	0	0	0	0	0	0	0	0	0	0	0
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ArticularyWordRecognition	0	0	0	0.959837	0.518	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.95212	0.65	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.917245	1.167	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.882726	1.942	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.827116	3.272	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+AtrialFibrillation	0	0	0	0.930766	0.006	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.889527	0.009	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.746567	0.025	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.566177	0.039	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.481022	0.072	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+BasicMotions	0	0	0	0.927898	0.004	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.89606	0.008	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.809205	0.01	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.746706	0.017	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.683905	0.028	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Cricket	0	0	0	0.934411	1.257	0	0	0	0	0	0	0	0	0	0	0	0
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Cricket	0	0	0	0.934411	1.118	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.909224	2.545	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.843714	5.843	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.764612	10.216	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.68361	19.789	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+DuckDuckGeese	0	0	0	0.946857	10.079	0	0	0	0	0	0	0	0	0	0	0	0
+DuckDuckGeese	0	0	0	0.920993	14.565	0	0	0	0	0	0	0	0	0	0	0	0
+DuckDuckGeese	0	0	0	0.884191	27.172	0	0	0	0	0	0	0	0	0	0	0	0
+DuckDuckGeese	0	0	0	0.854525	49.154	0	0	0	0	0	0	0	0	0	0	0	0
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Cricket	0	0	0	0.934315	0.968	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.909071	1.727	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.843426	4.401	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.763988	8.468	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.68273	15.982	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Cricket	0	0	0	0.875418	0	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.821087	0	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.696	0	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.541374	0	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.371509	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ArticularyWordRecognition	0	0	0	0.960265	0	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.951962	0	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.915134	0	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.878049	0	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.819361	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+AtrialFibrillation	0	0	0	0.931047	0	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.888915	0	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.742062	0	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.553857	0	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.461672	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+BasicMotions	0	0	0	0.943671	0	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.913533	0	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.822458	0	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.752675	0	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.682307	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Cricket	0	0	0	0.934315	0	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.909071	0	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.843426	0	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.763988	0	0	0	0	0	0	0	0	0	0	0	0	0
+Cricket	0	0	0	0.68273	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+DuckDuckGeese	0	0	0	0.946857	0	0	0	0	0	0	0	0	0	0	0	0	0
+DuckDuckGeese	0	0	0	0.920993	0	0	0	0	0	0	0	0	0	0	0	0	0
+DuckDuckGeese	0	0	0	0.884191	0	0	0	0	0	0	0	0	0	0	0	0	0
+DuckDuckGeese	0	0	0	0.854525	0	0	0	0	0	0	0	0	0	0	0	0	0
+DuckDuckGeese	0	0	0	0.825124	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Epilepsy	0	0	0	0.805456	0	0	0	0	0	0	0	0	0	0	0	0	0
+Epilepsy	0	0	0	0.736088	0	0	0	0	0	0	0	0	0	0	0	0	0
+Epilepsy	0	0	0	0.642958	0	0	0	0	0	0	0	0	0	0	0	0	0
+Epilepsy	0	0	0	0.558338	0	0	0	0	0	0	0	0	0	0	0	0	0
+Epilepsy	0	0	0	0.460906	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ERing	0	0	0	0.971505	0	0	0	0	0	0	0	0	0	0	0	0	0
+ERing	0	0	0	0.944676	0	0	0	0	0	0	0	0	0	0	0	0	0
+ERing	0	0	0	0.916334	0	0	0	0	0	0	0	0	0	0	0	0	0
+ERing	0	0	0	0.884273	0	0	0	0	0	0	0	0	0	0	0	0	0
+ERing	0	0	0	0.808095	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+EthanolConcentration	0	0	0	0.936314	0	0	0	0	0	0	0	0	0	0	0	0	0
+EthanolConcentration	0	0	0	0.894281	0	0	0	0	0	0	0	0	0	0	0	0	0
+EthanolConcentration	0	0	0	0.771805	0	0	0	0	0	0	0	0	0	0	0	0	0
+EthanolConcentration	0	0	0	0.661804	0	0	0	0	0	0	0	0	0	0	0	0	0
+EthanolConcentration	0	0	0	0.561121	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+FingerMovements	0	0	0	0.973839	0	0	0	0	0	0	0	0	0	0	0	0	0
+FingerMovements	0	0	0	0.973839	0	0	0	0	0	0	0	0	0	0	0	0	0
+FingerMovements	0	0	0	0.935703	0	0	0	0	0	0	0	0	0	0	0	0	0
+FingerMovements	0	0	0	0.913893	0	0	0	0	0	0	0	0	0	0	0	0	0
+FingerMovements	0	0	0	0.887897	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+HandMovementDirection	0	0	0	0.902573	0	0	0	0	0	0	0	0	0	0	0	0	0
+HandMovementDirection	0	0	0	0.828739	0	0	0	0	0	0	0	0	0	0	0	0	0
+HandMovementDirection	0	0	0	0.694743	0	0	0	0	0	0	0	0	0	0	0	0	0
+HandMovementDirection	0	0	0	0.597113	0	0	0	0	0	0	0	0	0	0	0	0	0
+HandMovementDirection	0	0	0	0.51349	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Handwriting	0	0	0	0.927153	0	0	0	0	0	0	0	0	0	0	0	0	0
+Handwriting	0	0	0	0.879155	0	0	0	0	0	0	0	0	0	0	0	0	0
+Handwriting	0	0	0	0.779008	0	0	0	0	0	0	0	0	0	0	0	0	0
+Handwriting	0	0	0	0.678957	0	0	0	0	0	0	0	0	0	0	0	0	0
+Handwriting	0	0	0	0.574507	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Heartbeat	0	0	0	0.926214	0	0	0	0	0	0	0	0	0	0	0	0	0
+Heartbeat	0	0	0	0.893269	0	0	0	0	0	0	0	0	0	0	0	0	0
+Heartbeat	0	0	0	0.829667	0	0	0	0	0	0	0	0	0	0	0	0	0
+Heartbeat	0	0	0	0.776294	0	0	0	0	0	0	0	0	0	0	0	0	0
+Heartbeat	0	0	0	0.732355	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Libras	0	0	0	0.953648	0	0	0	0	0	0	0	0	0	0	0	0	0
+Libras	0	0	0	0.953648	0	0	0	0	0	0	0	0	0	0	0	0	0
+Libras	0	0	0	0.910307	0	0	0	0	0	0	0	0	0	0	0	0	0
+Libras	0	0	0	0.870909	0	0	0	0	0	0	0	0	0	0	0	0	0
+Libras	0	0	0	0.779377	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+LSST	0	0	0	0.938277	0	0	0	0	0	0	0	0	0	0	0	0	0
+LSST	0	0	0	0.938277	0	0	0	0	0	0	0	0	0	0	0	0	0
+LSST	0	0	0	0.910379	0	0	0	0	0	0	0	0	0	0	0	0	0
+LSST	0	0	0	0.859606	0	0	0	0	0	0	0	0	0	0	0	0	0
+LSST	0	0	0	0.787463	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+NATOPS	0	0	0	0.966724	0	0	0	0	0	0	0	0	0	0	0	0	0
+NATOPS	0	0	0	0.939593	0	0	0	0	0	0	0	0	0	0	0	0	0
+NATOPS	0	0	0	0.914699	0	0	0	0	0	0	0	0	0	0	0	0	0
+NATOPS	0	0	0	0.871652	0	0	0	0	0	0	0	0	0	0	0	0	0
+NATOPS	0	0	0	0.828297	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+PenDigits	0	0	0	0.871961	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.871961	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.871961	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.871961	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.706391	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+RacketSports	0	0	0	0.941281	0	0	0	0	0	0	0	0	0	0	0	0	0
+RacketSports	0	0	0	0.941281	0	0	0	0	0	0	0	0	0	0	0	0	0
+RacketSports	0	0	0	0.90067	0	0	0	0	0	0	0	0	0	0	0	0	0
+RacketSports	0	0	0	0.867605	0	0	0	0	0	0	0	0	0	0	0	0	0
+RacketSports	0	0	0	0.801038	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+SelfRegulationSCP1	0	0	0	0.937822	0	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP1	0	0	0	0.896345	0	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP1	0	0	0	0.794287	0	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP1	0	0	0	0.700182	0	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP1	0	0	0	0.60343	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+SelfRegulationSCP2	0	0	0	0.932288	0	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP2	0	0	0	0.886711	0	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP2	0	0	0	0.793468	0	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP2	0	0	0	0.709109	0	0	0	0	0	0	0	0	0	0	0	0	0
+SelfRegulationSCP2	0	0	0	0.619346	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+StandWalkJump	0	0	0	0.935792	0	0	0	0	0	0	0	0	0	0	0	0	0
+StandWalkJump	0	0	0	0.898623	0	0	0	0	0	0	0	0	0	0	0	0	0
+StandWalkJump	0	0	0	0.798341	0	0	0	0	0	0	0	0	0	0	0	0	0
+StandWalkJump	0	0	0	0.687474	0	0	0	0	0	0	0	0	0	0	0	0	0
+StandWalkJump	0	0	0	0.637319	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+UWaveGestureLibrary	0	0	0	0.961473	0	0	0	0	0	0	0	0	0	0	0	0	0
+UWaveGestureLibrary	0	0	0	0.947099	0	0	0	0	0	0	0	0	0	0	0	0	0
+UWaveGestureLibrary	0	0	0	0.923259	0	0	0	0	0	0	0	0	0	0	0	0	0
+UWaveGestureLibrary	0	0	0	0.87064	0	0	0	0	0	0	0	0	0	0	0	0	0
+UWaveGestureLibrary	0	0	0	0.767585	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+PenDigits	0	0	0	0.871961	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.871961	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.871961	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.871961	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.706391	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+PenDigits	0	0	0	0.858483	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.858483	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.858483	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.858483	0	0	0	0	0	0	0	0	0	0	0	0	0
+PenDigits	0	0	0	0.843138	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ArticularyWordRecognition	0	0	0	0.881374	0	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.84914	0	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.73372	0	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.621354	0	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0.477872	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+AtrialFibrillation	0	0	0	0.867781	0	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.811328	0	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.60549	0	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.343757	0	0	0	0	0	0	0	0	0	0	0	0	0
+AtrialFibrillation	0	0	0	0.256934	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+BasicMotions	0	0	0	0.791159	0	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.665527	0	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.486338	0	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.38361	0	0	0	0	0	0	0	0	0	0	0	0	0
+BasicMotions	0	0	0	0.304068	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ArticularyWordRecognition	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Name	Time_DTW	TLB_MV	Time_MV	pruning rate_MV	TLB_MC1	Time_MC1	pruning rate_MC1	TLB_MCNaive1	Time_MCNaive1	pruning rate_MCNaive1	TLB_MC2	Time_MC2	pruning rate_MC2	TLB_MCNaive2	Time_MCNaive2	pruning rate_MCNaive2	TLB_MC3	Time_MC3	pruning rate_MC3	TLB_MC3E	Time_MC3E	pruning rate_MC3E	TLB_MC3_PLUS	Time_MC3_PLUS	pruning rate_MC3_PLUS	TLB_MC3_PLUS_SORT	Time_MC3_PLUS_SORT	pruning rate_MC3_PLUS_SORT	TLB_MC3_PLUS_COV	Time_MC3_PLUS_COV	pruning rate_MC3_PLUS_COV	TLB_MC3_PLUS_SIGMA	Time_MC3_PLUS_SIGMA	pruning rate_MC3_PLUS_SIGMA	TLB_PCA	Time_PCA	pruning rate_PCA	TLB_PCA4	Time_PCA4	pruning rate_PCA4
+ArticularyWordRecognition	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+ArticularyWordRecognition	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

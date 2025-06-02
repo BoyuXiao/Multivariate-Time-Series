@@ -160,7 +160,14 @@ void TLB(vector<vector<vector<double>>>& Test, vector<vector<vector<double>>>& T
                 if (MV_DOUBLE) {
                     // lb_mv_double = LB_MV_double_T(new_train,new_test,Q_L,Q_U,new_r);
                     // lb_mv_double = LB_MV_double_KIM_T(new_train,new_test,Q_L,Q_U,new_r);
-                    lb_mv_double = LB_MV_double_IDEA_T(new_train,new_test,Q_L,Q_U,new_r);
+                    // lb_mv_double = LB_MV_double_T_V2(new_train,new_test,Q_L,Q_U,new_r);
+                    // lb_mv_double = LB_MV_double_IDEA_T(new_train,new_test,Q_L,Q_U,new_r);
+                    // lb_mv_double = LB_MV_double_IDEA_T_V2(new_train,new_test,Train[j],Test[i],Q_L,Q_U,new_r);
+
+                    //test
+                    double t1 = LB_MV_double_IDEA_T(new_train,new_test,Q_L,Q_U,new_r);
+                    double t2 = LB_MV_double_IDEA_T_V2(new_train,new_test,Train[j],Test[i],Q_L,Q_U,new_r);
+                    if (t1>t2){cout<<t1<<" > "<<t2<<endl;};
                     // lb_mv_double = LB_TI(Train[j],Test[i],r,5);
                 }
                 if (MV_P) {
@@ -171,7 +178,7 @@ void TLB(vector<vector<vector<double>>>& Test, vector<vector<vector<double>>>& T
                 }
                 double dtwDistance = dtw(Train[j], Test[i], K, m, r);
                 // if (lb_mv_double>dtwDistance) {
-                //     cout<<i<<" "<<j<<" "<<lb_mv_double<<" "<<dtwDistance<<endl;
+                    // cout<<i<<" "<<j<<" "<<lb_mv_double<<" "<<dtwDistance<<endl;
                 // }
                 // if (lb_graph>dtwDistance) {
                 //     cout<<i<<" "<<j<<" "<<lb_graph<<" "<<dtwDistance<<endl;
@@ -350,7 +357,8 @@ void TLB(vector<vector<vector<double>>>& Test, vector<vector<vector<double>>>& T
                   start = clock();
                   // LB_MV_double_T(new_train,new_test,Q_L,Q_U,new_r);
                   // LB_MV_double_KIM_T(new_train,new_test,Q_L,Q_U,new_r);
-                  LB_MV_double_IDEA_T(new_train,new_test,Q_L,Q_U,new_r);
+                  // LB_MV_double_IDEA_T(new_train,new_test,Q_L,Q_U,new_r);
+                  LB_MV_double_IDEA_T_V2(new_train,new_test,Train[j],Test[i],Q_L,Q_U,new_r);
                   end = clock();
                   lb_mv_time += (end - start);
 

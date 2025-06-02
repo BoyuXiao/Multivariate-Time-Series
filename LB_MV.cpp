@@ -345,6 +345,45 @@ double LB_MV_double_T(vector<vector<double>>& A,vector<vector<double>>& Q, vecto
     return sqrt(lb);
 }
 
+
+double LB_MV_double_T_V2(vector<vector<double>>& A,vector<vector<double>>& Q,vector<vector<double>>& Q_L,vector<vector<double>>& Q_U,int r) {
+    int m = A[0].size();
+    int K = A.size();
+    double lb = 0.0;
+    double lb_temp = 0.0;
+    vector<double>max_val(m);
+    vector<double>A_L(m),A_U(m);
+    vector<double> lb_record(m,0);
+    vector<double> delta(m,0);
+    for (int k=0;k<K;k++) {
+        for (int i=0;i<m;i++) {
+            lb_temp = 0;
+            if (A[k][i]<Q_L[k][i]) {
+                lb_temp = dist(A[k][i],Q_L[k][i]);
+                lb_record[i] += lb_temp;
+            }else if (A[k][i]>Q_U[k][i]) {
+                lb_temp = dist(A[k][i],Q_U[k][i]);
+                lb_record[i] += lb_temp;
+            }
+            lb+=lb_temp;
+        }
+        //准备二次计算的资源
+        lower_upper_lemire(A[k],m,r,A_L,A_U);
+        for (int i=0;i<m;i++) {
+            if (Q[k][i]<A_L[i]) {
+                delta[i] += dist(Q[k][i],A_L[i]);
+            }else if (Q[k][i]>A_U[i]) {
+                delta[i] += dist(Q[k][i],A_U[i]);
+            }
+        }
+    }
+    upper_lemire(lb_record,m,r,max_val);
+    for (int i=0;i<m;i++) {
+        lb+=MAX(0.0,delta[i]-max_val[i]);
+    }
+    return sqrt(lb);
+}
+
 double LB_MV_double_KIM_T(vector<vector<double>>& A,vector<vector<double>>& Q, vector<vector<double>>& Q_L,vector<vector<double>>& Q_U,int r) {
     int m = A[0].size();
     int K = A.size();
@@ -383,6 +422,37 @@ double LB_MV_double_KIM_T(vector<vector<double>>& A,vector<vector<double>>& Q, v
     return sqrt(lb);
 }
 
+// double LB_MV_double_IDEA_T(vector<vector<double>>& A,vector<vector<double>>& Q, vector<vector<double>>& Q_L,vector<vector<double>>& Q_U,int r) {
+//     int m = A[0].size();
+//     int K = A.size();
+//     double lb = 0.0;
+//     vector<double> lb_record(m,0);
+//     for (int k=0;k<K;k++) {
+//         lb_record.assign(m, 0);
+//         for (int i=3;i<m-3;i++) {
+//             if (A[k][i]<Q_L[k][i]) {
+//                 lb_record[i] = dist(A[k][i],Q_L[k][i]);
+//             }else if (A[k][i]>Q_U[k][i]) {
+//                 lb_record[i] = dist(A[k][i],Q_U[k][i]);
+//             }
+//             lb+=lb_record[i];
+//         }
+//         lb+=LB_KIM_NEW(Q[k], A[k], m);
+//         for (int i=3;i<m-3;i++) {
+//             const int start = MAX(0,i-r);
+//             const int end = MIN(m-1,i+r);
+//             double min_val = MAX_VAL;
+//             for (int j=start;j<=end;j++) {
+//                 double distance = dist(Q[k][i],A[k][j]) - lb_record[j];
+//                 min_val = MIN(min_val,distance);
+//             }
+//             lb+=MAX(0.0,min_val);
+//         }
+//     }
+//
+//     return sqrt(lb);
+// }
+
 double LB_MV_double_IDEA_T(vector<vector<double>>& A,vector<vector<double>>& Q, vector<vector<double>>& Q_L,vector<vector<double>>& Q_U,int r) {
     int m = A[0].size();
     int K = A.size();
@@ -390,7 +460,7 @@ double LB_MV_double_IDEA_T(vector<vector<double>>& A,vector<vector<double>>& Q, 
     vector<double> lb_record(m,0);
     for (int k=0;k<K;k++) {
         lb_record.assign(m, 0);
-        for (int i=3;i<m-3;i++) {
+        for (int i=0;i<m;i++) {
             if (A[k][i]<Q_L[k][i]) {
                 lb_record[i] = dist(A[k][i],Q_L[k][i]);
             }else if (A[k][i]>Q_U[k][i]) {
@@ -398,8 +468,8 @@ double LB_MV_double_IDEA_T(vector<vector<double>>& A,vector<vector<double>>& Q, 
             }
             lb+=lb_record[i];
         }
-        lb+=LB_KIM_NEW(Q[k], A[k], m);
-        for (int i=3;i<m-3;i++) {
+        // lb+=LB_KIM_NEW(Q[k], A[k], m);
+        for (int i=0;i<m;i++) {
             const int start = MAX(0,i-r);
             const int end = MIN(m-1,i+r);
             double min_val = MAX_VAL;
@@ -413,6 +483,73 @@ double LB_MV_double_IDEA_T(vector<vector<double>>& A,vector<vector<double>>& Q, 
 
     return sqrt(lb);
 }
+
+
+double LB_MV_double_IDEA_T_V2(vector<vector<double>>& A,vector<vector<double>>& Q, vector<vector<double>>& A_t,vector<vector<double>>& Q_t,vector<vector<double>>& Q_L,vector<vector<double>>& Q_U,int r) {
+    int m = A[0].size();
+    int K = A.size();
+    double lb = 0.0;
+    double lb_temp = 0.0;
+    vector<double> lb_record(m,0);
+    for (int k=0;k<K;k++) {
+        for (int i=0;i<m;i++) {
+            lb_temp = 0;
+            if (A[k][i]<Q_L[k][i]) {
+                lb_temp = dist(A[k][i],Q_L[k][i]);
+                lb_record[i] += lb_temp;
+            }else if (A[k][i]>Q_U[k][i]) {
+                lb_temp = dist(A[k][i],Q_U[k][i]);
+                lb_record[i] += lb_temp;
+            }
+            lb+=lb_temp;
+        }
+        // lb+=LB_KIM_NEW(Q[k], A[k], m);
+    }
+        for (int i=0;i<m;i++) {
+            const int start = MAX(0,i-r);
+            const int end = MIN(m-1,i+r);
+            double min_val = MAX_VAL;
+            for (int j=start;j<=end;j++) {
+                double distance = euclideanDistance_2(Q_t[i],A_t[j]) - lb_record[j];
+                min_val = MIN(min_val,distance);
+            }
+            lb+=MAX(0.0,min_val);
+        }
+    return sqrt(lb);
+}
+
+// double LB_MV_double_IDEA_T_V2(vector<vector<double>>& A,vector<vector<double>>& Q, vector<vector<double>>& A_t,vector<vector<double>>& Q_t,vector<vector<double>>& Q_L,vector<vector<double>>& Q_U,int r) {
+//     int m = A[0].size();
+//     int K = A.size();
+//     double lb = 0.0;
+//     double lb_temp = 0.0;
+//     vector<double> lb_record(m,0);
+//     for (int k=0;k<K;k++) {
+//         for (int i=3;i<m-3;i++) {
+//             lb_temp = 0;
+//             if (A[k][i]<Q_L[k][i]) {
+//                 lb_temp = dist(A[k][i],Q_L[k][i]);
+//                 lb_record[i] += lb_temp;
+//             }else if (A[k][i]>Q_U[k][i]) {
+//                 lb_temp = dist(A[k][i],Q_U[k][i]);
+//                 lb_record[i] += lb_temp;
+//             }
+//             lb+=lb_temp;
+//         }
+//         lb+=LB_KIM_NEW(Q[k], A[k], m);
+//     }
+//     for (int i=3;i<m-3;i++) {
+//         const int start = MAX(0,i-r);
+//         const int end = MIN(m-1,i+r);
+//         double min_val = MAX_VAL;
+//         for (int j=start;j<=end;j++) {
+//             double distance = euclideanDistance_2(Q_t[i],A_t[j]) - lb_record[j];
+//             min_val = MIN(min_val,distance);
+//         }
+//         lb+=MAX(0.0,min_val);
+//     }
+//     return sqrt(lb);
+// }
 
 double LB_P_MV(vector<vector<double>>& A,vector<vector<double>>& Q, vector<vector<double>>& Q_L,vector<vector<double>>& Q_U,int r) {
     int m = A[0].size();

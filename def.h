@@ -149,7 +149,7 @@ using namespace std;
 #define PCA4 0
 #define NAIVE1 0
 #define NAIVE2 0
-#define MV_DOUBLE 0
+#define MV_DOUBLE 1
 #define MV_P 0
 #define MV_WEB 0
 
@@ -161,7 +161,7 @@ using namespace std;
 #define Time_MV_WEB_TEST 0
 #define Time_PC_TEST 0
 #define Time_MC3E_TEST 0
-#define Time_DOUBLE_TEST 1
+#define Time_DOUBLE_TEST 0
 
 
 
