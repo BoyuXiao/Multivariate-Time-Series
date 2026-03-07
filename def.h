@@ -153,15 +153,15 @@ using namespace std;
 #define MV_P 0
 #define MV_WEB 0
 
-#define Time_DTW_TEST 0
+#define Time_DTW_TEST 1
 #define Time_GRAPH_TEST 0
-#define Time_MV_TEST 0
+#define Time_MV_TEST 1
 #define Time_TI_TEST 0
-#define Time_MV_P_TEST 0
-#define Time_MV_WEB_TEST 0
-#define Time_PC_TEST 0
-#define Time_MC3E_TEST 0
-#define Time_DOUBLE_TEST 0
+#define Time_MV_P_TEST 1
+#define Time_MV_WEB_TEST 1
+#define Time_PC_TEST  0
+#define Time_MC3E_TEST 1
+#define Time_DOUBLE_TEST 1
 
 
 

@@ -25,7 +25,25 @@ double LB_MV_double(vector<vector<double>>& A,vector<vector<double>>& Q,vector<d
 //     vector<double>& Dtl, vector<double>& Dtr,
 //     vector<vector<vector<Cell>>>& T,
 //     vector <double>& intervalLength_mu,vector <double>& intervalLength_sigma ,vector <int>& num,vector<double>&lb_record,int r);
-
+vector<double> getLB_oneQ_qbox(const vector<vector<double>>& X,
+                             const vector<vector<vector<double>>>& others,
+                             const vector<pair<vector<double>, vector<double>>>& qbounds);
+void LB_P_MV_early(vector<vector<double>>& A,vector<vector<double>>& Q, vector<vector<double>>& Q_L,vector<vector<double>>& Q_U,int r,double threshold,int &flag,double &lb);
+void LB_P_MV_early(vector<vector<double>>& A,vector<vector<double>>& Q, vector<vector<double>>& Q_L,vector<vector<double>>& Q_U,int r,double threshold,int &flag,double &lb,vector<double>&cb);
+tuple<double, int, int, double, int> DTWDistanceWindowLB_Ordered_LBPC_(
+    int K,
+    double Q,
+    const vector<vector<double>>& query,
+    const vector<vector<vector<double>>>& references,
+    int W);
+double DTW_a(const vector<vector<double>>& s1,
+             const vector<vector<double>>& s2,
+             int windowSize,
+             double bestdist);
+tuple< int, int> DTWDistanceWindowLB_Ordered_LBTI(
+    const vector<vector<double>>& query,
+    const vector<vector<vector<double>>>& references,
+    int W,double threshold, int P);
 double LB_GRAPH(vector<vector<double>>& A,vector<vector<double>>& Q,vector<vector<double>>& A_T,vector<vector<double>>& Q_T,
     vector<double>& U_mu_Q,vector<double>& L_mu_Q,
     vector<double>& U_sigma_Q,vector<double>& L_sigma_Q,
@@ -45,6 +63,8 @@ void lower_upper_lemire(vector<double>& Q, int m, int r, vector<double>& lowerBo
 void TLB(vector<vector<vector<double>>>& Test, vector<vector<vector<double>>>& Train,string name);
 double euclideanDistance_2(vector<double>& point1, vector<double>& point2);
 double dtw(vector<vector<double>>& A, vector<vector<double>>& B, int K, int m, int r);
+double dtw(vector<vector<double>>& A, vector<vector<double>>& B, int K, int m, int r,double threshold);
+double dtw(vector<vector<double>>& A, vector<vector<double>>& B, int K, int m, int r,double threshold,vector<double>&cb);
 double LB_Keogh_2(vector<double>& A, vector<double>& Q, int m, int r);
 double LB_Keogh_old(vector<double>& Q, vector<double>& A, int m, int r);
 double LB_MV(vector<vector<double>>& Q, vector<vector<double>>& A, int K, int m, int r);

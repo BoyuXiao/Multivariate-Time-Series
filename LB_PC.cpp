@@ -172,98 +172,98 @@ tuple<double, vector<vector<vector<vector<double>>>>> DTWwbbox(
     }
 
 
-    return {sqrt(DTW[len1][len2]), bboxes};
+    return {sqrt(DTW[len1-1][len2-1]), bboxes};
 }
 
-// tuple<double, int, int, double, int> DTWDistanceWindowLB_Ordered_LBPC_(
-//     int K,
-//     double Q,
-//     const vector<vector<double>>& query,
-//     const vector<vector<vector<double>>>& references,
-//     int W,
-//     double TH = 1.0)
-// {
-//     // 初始化统计量
-//     int skip = 0;
-//     int cluster_cals = 0;
-//     double coretime = 0.0;
-//
-//     const int ql = query.size();
-//     const int dim = query[0].size();
-//     vector<vector<vector<double>>> bounds(ql);
-//
-//     // Step 1: 计算查询序列的边界框
-//     for (int idx = 0; idx < ql; ++idx) {
-//         int start = max(0, idx - W);
-//         int end = min(ql-1, idx + W) + 1; // 包含右端点
-//
-//         vector<vector<double>> segment;
-//         for (int i = start; i < end; ++i) {
-//             segment.push_back(query[i]);
-//         }
-//
-//         vector<double> l(dim, numeric_limits<double>::max());
-//         vector<double> u(dim, -numeric_limits<double>::max());
-//
-//         for (const auto& p : segment) {
-//             for (int d = 0; d < dim; ++d) {
-//                 if (p[d] < l[d]) l[d] = p[d];
-//                 if (p[d] > u[d]) u[d] = p[d];
-//             }
-//         }
-//         bounds[idx] = {l, u};
-//     }
-//
-//     // Step 2: 计算初步下界并排序
-//     auto M0LBs = getLB_oneQ_qbox(query, references, bounds);
-//
-//     // 生成排序索引
-//     vector<size_t> LBSortedIndex(references.size());
-//     iota(LBSortedIndex.begin(), LBSortedIndex.end(), 0);
-//     sort(LBSortedIndex.begin(), LBSortedIndex.end(),
-//         [&M0LBs](size_t i1, size_t i2) { return M0LBs[i1] < M0LBs[i2]; });
-//
-//     int predId = LBSortedIndex[0];
-//
-//     // Step 3: 计算初始DTW和边界框
-//     auto [dist, bboxes] = DTWwbbox(query, references[predId], W, K, Q);
-//
-//     // Step 4: 二次筛选过程
-//     for (size_t x = 1; x < LBSortedIndex.size(); ++x) {
-//         int thisrefid = LBSortedIndex[x];
-//         double currentLB = M0LBs[thisrefid];
-//
-//         if (currentLB >= dist) {
-//             skip += (LBSortedIndex.size() - x);
-//             break;
-//         }
-//
-//         if (currentLB >= dist - TH * dist) {
-//             // 使用聚类下界
-//             double c_lb = getLB_oneQR(query, references[thisrefid], bboxes, dist);
-//             cluster_cals++;
-//
-//             if (c_lb < dist) {
-//                 double dist2 = DTW_a(query, references[thisrefid], W, dist);
-//                 if (dist2 < dist) {
-//                     dist = dist2;
-//                     predId = thisrefid;
-//                 }
-//             } else {
-//                 skip++;
-//             }
-//         } else {
-//             // 直接计算DTW
-//             double dist2 = DTW_a(query, references[thisrefid], W, dist);
-//             if (dist2 < dist) {
-//                 dist = dist2;
-//                 predId = thisrefid;
-//             }
-//         }
-//     }
-//
-//     return make_tuple(dist, predId, skip, coretime, cluster_cals);
-// }
+tuple<double, int, int, double, int> DTWDistanceWindowLB_Ordered_LBPC_(
+    int K,
+    double Q,
+    const vector<vector<double>>& query,
+    const vector<vector<vector<double>>>& references,
+    int W)
+{
+    double TH = 1.0;
+    // 初始化统计量
+    int skip = 0;
+    int cluster_cals = 0;
+    double coretime = 0.0;
+
+    const int ql = query.size();
+    const int dim = query[0].size();
+    vector<pair<vector<double>, vector<double>>> bounds(ql);
+
+    // Step 1: 计算查询序列的边界框
+    for (int idx = 0; idx < ql; ++idx) {
+        int start = max(0, idx - W);
+        int end = min(ql-1, idx + W) + 1; // 包含右端点
+
+        vector<vector<double>> segment;
+        for (int i = start; i < end; ++i) {
+            segment.push_back(query[i]);
+        }
+
+        vector<double> l(dim, numeric_limits<double>::max());
+        vector<double> u(dim, -numeric_limits<double>::max());
+
+        for (const auto& p : segment) {
+            for (int d = 0; d < dim; ++d) {
+                if (p[d] < l[d]) l[d] = p[d];
+                if (p[d] > u[d]) u[d] = p[d];
+            }
+        }
+        bounds[idx] = make_pair(l,u);
+    }
+
+    // Step 2: 计算初步下界并排序
+    auto M0LBs = getLB_oneQ_qbox(query, references, bounds);
+
+    // 生成排序索引
+    vector<size_t> LBSortedIndex(references.size());
+    iota(LBSortedIndex.begin(), LBSortedIndex.end(), 0);
+    sort(LBSortedIndex.begin(), LBSortedIndex.end(),
+        [&M0LBs](size_t i1, size_t i2) { return M0LBs[i1] < M0LBs[i2]; });
+
+    int predId = LBSortedIndex[0];
+
+    // Step 3: 计算初始DTW和边界框
+    auto [dist, bboxes] = DTWwbbox(query, references[predId], W, K, Q);
+
+    // Step 4: 二次筛选过程
+    for (size_t x = 1; x < LBSortedIndex.size(); ++x) {
+        int thisrefid = LBSortedIndex[x];
+        double currentLB = M0LBs[thisrefid];
+
+        if (currentLB >= dist) {
+            skip += (LBSortedIndex.size() - x);
+            break;
+        }
+
+        if (currentLB >= dist - TH * dist) {
+            // 使用聚类下界
+            double c_lb = getLB_oneQR(query, references[thisrefid], bboxes, dist);
+            cluster_cals++;
+
+            if (c_lb < dist) {
+                double dist2 = DTW_a(query, references[thisrefid], W, dist);
+                if (dist2 < dist) {
+                    dist = dist2;
+                    predId = thisrefid;
+                }
+            } else {
+                skip++;
+            }
+        } else {
+            // 直接计算DTW
+            double dist2 = DTW_a(query, references[thisrefid], W, dist);
+            if (dist2 < dist) {
+                dist = dist2;
+                predId = thisrefid;
+            }
+        }
+    }
+
+    return make_tuple(dist, predId, skip, coretime, cluster_cals);
+}
 
 
 
