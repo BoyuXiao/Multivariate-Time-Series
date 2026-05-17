@@ -2,6 +2,7 @@
 #include <ostream>
 #include <fstream>
 #include "funcs.h"
+#include "lb_early.h"
 using namespace std;
 
 
@@ -82,98 +83,141 @@ double lbPetitjean_new(std::vector<double>& q,const std::vector<double>& uq, con
     return lbk2;
 }
 
-double lbPetitjean_new_early(std::vector<double>& q,const std::vector<double>& uq, const std::vector<double>& lq, std::vector<double>& x,
-                     const std::vector<double>& ux, const std::vector<double>& lx, int w,double threshold,int &flag,double &lbk2) {
-    int m = q.size();
+double lbPetitjean_new_early(std::vector<double>& q, const std::vector<double>& uq, const std::vector<double>& lq,
+                             std::vector<double>& x, const std::vector<double>& ux, const std::vector<double>& lx,
+                             int w, double best_dist) {
+    const double thresh_sq = lb_threshold_sq(best_dist);
+    double lbk2 = 0;
+    int m = static_cast<int>(q.size());
     vector<double> p(m);
 
-    lbk2 += LB_KIM_NEW(q, x,  m);
-    for (int i = 3; i < m-3; i++) {
+    lbk2 += LB_KIM_NEW(q, x, m);
+    if (lb_can_early_stop(best_dist) && lbk2 >= thresh_sq) {
+        return lbk2;
+    }
+
+    for (int i = 3; i < m - 3; i++) {
         double qi = q[i];
         if (qi > ux[i]) {
             lbk2 += dist(qi, ux[i]);
         } else if (qi < lx[i]) {
             lbk2 += dist(qi, lx[i]);
         }
-        if (lbk2 > threshold) {flag = 1;return lbk2;}
-    }
-    if (lbk2 > threshold) {flag = 1;return lbk2;}
-    for (int i=0;i<m;i++) {
-        if (i<3||i>=m-3) {
-            p[i]=q[i];
+        if (lb_can_early_stop(best_dist) && lbk2 >= thresh_sq) {
+            return lbk2;
         }
-        else if (q[i]>ux[i]) {
-            p[i]=ux[i];
-        }else if (q[i]<lx[i]) {
-            p[i]=lx[i];
-        }else p[i]=q[i];
     }
-    vector<double>lp(m),up(m);
-    lower_upper_lemire(p,m,w,lp,up);
 
-    for (int ii=3;ii<m-3;ii++) {
-        if(x[ii] > up[ii] && up[ii] > uq[ii]) {
+    for (int i = 0; i < m; i++) {
+        if (i < 3 || i >= m - 3) {
+            p[i] = q[i];
+        } else if (q[i] > ux[i]) {
+            p[i] = ux[i];
+        } else if (q[i] < lx[i]) {
+            p[i] = lx[i];
+        } else {
+            p[i] = q[i];
+        }
+    }
+    vector<double> lp(m), up(m);
+    lower_upper_lemire(p, m, w, lp, up);
+
+    for (int ii = 3; ii < m - 3; ii++) {
+        if (x[ii] > up[ii] && up[ii] > uq[ii]) {
             lbk2 += (dist(x[ii], uq[ii]) - dist(up[ii], uq[ii]));
-        } else if(x[ii] < lp[ii] && lp[ii] < lq[ii]) {
+        } else if (x[ii] < lp[ii] && lp[ii] < lq[ii]) {
             lbk2 += (dist(x[ii], lq[ii]) - dist(lp[ii], lq[ii]));
-        } else if(x[ii] > up[ii]) {
+        } else if (x[ii] > up[ii]) {
             lbk2 += dist(x[ii], up[ii]);
-        } else if(x[ii] < lp[ii]) {
+        } else if (x[ii] < lp[ii]) {
             lbk2 += dist(x[ii], lp[ii]);
         }
-        if (lbk2 > threshold) {flag = 1;return lbk2;}
+        if (lb_can_early_stop(best_dist) && lbk2 >= thresh_sq) {
+            return lbk2;
+        }
     }
-
     return lbk2;
 }
 
-double lbPetitjean_new_early(std::vector<double>& q,const std::vector<double>& uq, const std::vector<double>& lq, std::vector<double>& x,
-                     const std::vector<double>& ux, const std::vector<double>& lx, int w,double threshold,int &flag,double &lbk2,vector<double>&cb) {
-    int m = q.size();
-    vector<double> p(m);
-
-    for (int i = 0; i < m; i++) {
-        double qi = q[i];
-        double temp=0;
-        if (qi > ux[i]) {
-            temp = dist(qi, ux[i]);
-        } else if (qi < lx[i]) {
-            temp = dist(qi, lx[i]);
-        }
-        lbk2+=temp;
-        cb[i]+=temp;
-        if (lbk2 > threshold) {flag = 1;return lbk2;}
-    }
-    for (int i=0;i<m;i++) {
-        if (i<3||i>=m-3) {
-            p[i]=q[i];
-        }
-        else if (q[i]>ux[i]) {
-            p[i]=ux[i];
-        }else if (q[i]<lx[i]) {
-            p[i]=lx[i];
-        }else p[i]=q[i];
-    }
-    vector<double>lp(m),up(m);
-    lower_upper_lemire(p,m,w,lp,up);
-
-    for (int ii=0;ii<m;ii++) {
-        double temp = 0;
-        if(x[ii] > up[ii] && up[ii] > uq[ii]) {
-            temp = (dist(x[ii], uq[ii]) - dist(up[ii], uq[ii]));
-        } else if(x[ii] < lp[ii] && lp[ii] < lq[ii]) {
-            temp = (dist(x[ii], lq[ii]) - dist(lp[ii], lq[ii]));
-        } else if(x[ii] > up[ii]) {
-            temp = dist(x[ii], up[ii]);
-        } else if(x[ii] < lp[ii]) {
-            temp = dist(x[ii], lp[ii]);
-        }
-        lbk2+=temp;
-        cb[ii]+=temp;
-        if (lbk2 > threshold) {flag = 1;return lbk2;}
+double lbWebb_early(const std::vector<double>& q, const std::vector<double>& uq, const std::vector<double>& lq,
+                    const std::vector<double>& luq, const std::vector<double>& ulq, const std::vector<double>& t,
+                    const std::vector<double>& ut, const std::vector<double>& lt, const std::vector<double>& lut,
+                    const std::vector<double>& ult, int window, double best_dist) {
+    const double thresh_sq = lb_threshold_sq(best_dist);
+    double lb = 0;
+    int m = static_cast<int>(q.size());
+    lb += LB_KIM_NEW(t, q, m);
+    if (lb_can_early_stop(best_dist) && lb >= thresh_sq) {
+        return lb;
     }
 
-    return lbk2;
+    int freeCountAbove = window;
+    int freeCountBelow = window;
+    for (int i = 3; i < m - 3; ++i) {
+        if (q[i] > ut[i]) {
+            lb += (q[i] - ut[i]) * (q[i] - ut[i]);
+            if (ut[i] >= ulq[i]) {
+                freeCountBelow++;
+            } else {
+                freeCountBelow = 0;
+            }
+            freeCountAbove = 0;
+        } else if (q[i] < lt[i]) {
+            lb += (q[i] - lt[i]) * (q[i] - lt[i]);
+            if (lt[i] <= luq[i]) {
+                freeCountAbove++;
+            } else {
+                freeCountAbove = 0;
+            }
+            freeCountBelow = 0;
+        } else {
+            freeCountAbove++;
+            freeCountBelow++;
+        }
+        if (lb_can_early_stop(best_dist) && lb >= thresh_sq) {
+            return lb;
+        }
+
+        if (i >= window + 3) {
+            int j = i - window;
+            if (t[j] > uq[j]) {
+                if (freeCountAbove > 2 * window) {
+                    lb += (t[j] - uq[j]) * (t[j] - uq[j]);
+                } else if (t[j] > ult[j] && ult[j] >= uq[j]) {
+                    lb += (t[j] - uq[j]) * (t[j] - uq[j]) - (ult[j] - uq[j]) * (ult[j] - uq[j]);
+                }
+            } else if (t[j] < lq[j]) {
+                if (freeCountBelow > 2 * window) {
+                    lb += (t[j] - lq[j]) * (t[j] - lq[j]);
+                } else if (t[j] < lut[j] && lut[j] <= lq[j]) {
+                    lb += (t[j] - lq[j]) * (t[j] - lq[j]) - (lut[j] - lq[j]) * (lut[j] - lq[j]);
+                }
+            }
+            if (lb_can_early_stop(best_dist) && lb >= thresh_sq) {
+                return lb;
+            }
+        }
+    }
+
+    for (int j = m - 3 - window; j < m - 3; ++j) {
+        if (t[j] > uq[j]) {
+            if (j >= m - 3 - freeCountAbove + window) {
+                lb += (t[j] - uq[j]) * (t[j] - uq[j]);
+            } else if (t[j] > ult[j] && ult[j] >= uq[j]) {
+                lb += (t[j] - uq[j]) * (t[j] - uq[j]) - (ult[j] - uq[j]) * (ult[j] - uq[j]);
+            }
+        } else if (t[j] < lq[j]) {
+            if (j >= m - 3 - freeCountBelow + window) {
+                lb += (t[j] - lq[j]) * (t[j] - lq[j]);
+            } else if (t[j] < lut[j] && lut[j] <= lq[j]) {
+                lb += (t[j] - lq[j]) * (t[j] - lq[j]) - (lut[j] - lq[j]) * (lut[j] - lq[j]);
+            }
+        }
+        if (lb_can_early_stop(best_dist) && lb >= thresh_sq) {
+            return lb;
+        }
+    }
+    return lb;
 }
 
 double lbWebb(const std::vector<double>& q, const std::vector<double>& uq, const std::vector<double>& lq,
@@ -274,6 +318,45 @@ double LB_MV(vector<vector<double>>& Q, vector<vector<double>>& A, int K, int m,
         lb += LB_Keogh_2(A_col, Q_col, m, r);
     }
     // cout<<sqrt(lb)<<endl;
+    return sqrt(lb);
+}
+
+double LB_MV_early(vector<vector<double>>& Q, vector<vector<double>>& A, int K, int m, int r, double best_dist) {
+    const double thresh_sq = lb_threshold_sq(best_dist);
+    double lb = 0.0;
+    for (int k = 0; k < K; ++k) {
+        vector<double> Q_col;
+        vector<double> A_col;
+        for (int i = 0; i < Q.size(); ++i) {
+            Q_col.push_back(Q[i][k]);
+        }
+        for (int i = 0; i < A.size(); ++i) {
+            A_col.push_back(A[i][k]);
+        }
+        lb += LB_Keogh_2_early(A_col, Q_col, m, r, best_dist);
+        if (lb_can_early_stop(best_dist) && lb >= thresh_sq) {
+            return sqrt(lb);
+        }
+    }
+    return sqrt(lb);
+}
+
+// 转置版：A_t[k] 为 train 第 k 维的 1D 序列（与 LB_MV_T_hot_map / P_MV 一致），
+// 避免每次 (query,train) 对拷贝 A_col 计入 Lb 时间。
+double LB_MV_early_env(vector<vector<double>>& A_t,
+                     int K,
+                     int m,
+                     const vector<vector<double>>& q_lower,
+                     const vector<vector<double>>& q_upper,
+                     double best_dist) {
+    const double thresh_sq = lb_threshold_sq(best_dist);
+    double lb = 0.0;
+    for (int k = 0; k < K; ++k) {
+        lb += LB_Keogh_2_env_early(A_t[k], q_lower[k], q_upper[k], m, best_dist);
+        if (lb_can_early_stop(best_dist) && lb >= thresh_sq) {
+            return sqrt(lb);
+        }
+    }
     return sqrt(lb);
 }
 
@@ -659,31 +742,52 @@ double LB_P_MV(vector<vector<double>>& A,vector<vector<double>>& Q, vector<vecto
     return sqrt(lb);
 }
 
-void LB_P_MV_early(vector<vector<double>>& A,vector<vector<double>>& Q, vector<vector<double>>& Q_L,vector<vector<double>>& Q_U,int r,double threshold,int &flag,double &lb) {
-    int m = A[0].size();
-    int K = A.size();
-    vector<double>A_L(m),A_U(m);
-    for (int k=0;k<K;k++) {
-        lower_upper_lemire(A[k],m,r,A_L,A_U);
-        flag = 0 ;
-        lbPetitjean_new_early(A[k],A_U,A_L,Q[k],Q_U[k],Q_L[k],r,threshold*threshold,flag,lb);
-        if (flag)break;
+double LB_P_MV_early(vector<vector<double>>& A, vector<vector<double>>& Q,
+                   vector<vector<double>>& Q_L, vector<vector<double>>& Q_U,
+                   int r, double best_dist) {
+    int m = static_cast<int>(A[0].size());
+    int K = static_cast<int>(A.size());
+    const double thresh_sq = lb_threshold_sq(best_dist);
+    double lb = 0.0;
+    vector<double> A_L(m), A_U(m);
+    for (int k = 0; k < K; k++) {
+        lower_upper_lemire(A[k], m, r, A_L, A_U);
+        lb += lbPetitjean_new_early(A[k], A_U, A_L, Q[k], Q_U[k], Q_L[k], r, best_dist);
+        if (lb_can_early_stop(best_dist) && lb >= thresh_sq) {
+            return sqrt(lb);
+        }
     }
-    // return sqrt(lb);
+    return sqrt(lb);
 }
 
-void LB_P_MV_early(vector<vector<double>>& A,vector<vector<double>>& Q, vector<vector<double>>& Q_L,vector<vector<double>>& Q_U,int r,double threshold,int &flag,double &lb,vector<double>&cb) {
-    int m = A[0].size();
-    int K = A.size();
-    vector<double>A_L(m),A_U(m);
-    for (int k=0;k<K;k++) {
-        lower_upper_lemire(A[k],m,r,A_L,A_U);
-        lbPetitjean_new_early(A[k],A_U,A_L,Q[k],Q_U[k],Q_L[k],r,threshold,flag,lb,cb);
-        if (flag)break;
-    }
-    // return sqrt(lb);
+double LB_WEB_early(const std::vector<double>& q, vector<double>& uq, vector<double>& lq, const std::vector<double>& t,
+                    vector<double>& ut, vector<double>& lt, const std::vector<double>& lut,
+                    const std::vector<double>& ult, int window, double best_dist) {
+    int m = static_cast<int>(q.size());
+    vector<double> luq(m), ulq(m);
+    lower_lemire(uq, m, window, luq);
+    upper_lemire(lq, m, window, ulq);
+    return lbWebb_early(q, uq, lq, luq, ulq, t, ut, lt, lut, ult, window, best_dist);
 }
 
+double LB_WEB_MV_early(vector<vector<double>>& A, vector<vector<double>>& Q,
+                    vector<vector<double>>& Q_L, vector<vector<double>>& Q_U,
+                    vector<vector<double>>& L_UQ, vector<vector<double>>& U_LQ,
+                    int r, double best_dist) {
+    int m = static_cast<int>(A[0].size());
+    int K = static_cast<int>(A.size());
+    const double thresh_sq = lb_threshold_sq(best_dist);
+    double lb = 0.0;
+    vector<double> A_L(m), A_U(m);
+    for (int k = 0; k < K; k++) {
+        lower_upper_lemire(A[k], m, r, A_L, A_U);
+        lb += LB_WEB_early(A[k], A_U, A_L, Q[k], Q_U[k], Q_L[k], L_UQ[k], U_LQ[k], r, best_dist);
+        if (lb_can_early_stop(best_dist) && lb >= thresh_sq) {
+            return sqrt(lb);
+        }
+    }
+    return sqrt(lb);
+}
 
 double LB_WEB(const std::vector<double>& q, vector<double>& uq, vector<double>& lq,const std::vector<double>& t,vector<double>& ut, vector<double>& lt,const std::vector<double>& lut,
               const std::vector<double>& ult, int window) {

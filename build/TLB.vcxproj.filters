@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\TLB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\nn1_lb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\dtw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\dist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\LB_MV.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\LB_MC1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\LB_Keogh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\LB_MC2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\LB_MC_NAIVE1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\LB_MC_NAIVE2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\mu_sigma.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\read_data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\lower_upper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\only_mu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\transpose.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\LB_MC3E.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\split_two_dim.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\LB_TI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\LB_PC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\LB_Petitjean.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3CF04B3B-20AD-3BBD-B962-D5E32795C627}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -4,6 +4,7 @@
 #include <limits>
 #include <algorithm>
 #include "funcs.h"
+#include "lb_early.h"
 #include <tuple>
 #include <string>
 #include <sstream>
@@ -363,6 +364,88 @@ tuple< int, int> DTWDistanceWindowLB_Ordered_LBTI(
     }
 
     return {skips, p_cals};
+}
+
+double LB_TI_early(const vector<vector<double>>& X, const vector<vector<double>>& Y, int W, int P,
+                   double best_dist) {
+    const int Xlen = static_cast<int>(X.size());
+    const int Ylen = static_cast<int>(Y.size());
+    const int window_size = 2 * W + 1;
+
+    auto res = DTWwnd(X, Y, W);
+    vector<double> dxx = res.second;
+
+    vector<vector<double>> upperBounds(Xlen, vector<double>(window_size, INF));
+    vector<vector<double>> lowerBounds(Xlen, vector<double>(window_size, INF));
+
+    double lbrst = 0.0;
+    const double thresh_sq = lb_threshold_sq(best_dist);
+
+    for (int t = 0; t < Xlen; ++t) {
+        const int startIdx = (t > W) ? 0 : W - t;
+
+        if (t % P == 0) {
+            const int lw = max(0, t - W);
+            const int tp = min(t + W + 1, Ylen);
+            vector<double> dxyInit;
+            for (int i = lw; i < tp; ++i) {
+                dxyInit.push_back(distance(X[t], Y[i]));
+            }
+            const int copy_len = tp - lw;
+            fill(upperBounds[t].begin() + startIdx, upperBounds[t].begin() + startIdx + copy_len, INF);
+            copy(dxyInit.begin(), dxyInit.end(), upperBounds[t].begin() + startIdx);
+            copy(dxyInit.begin(), dxyInit.end(), lowerBounds[t].begin() + startIdx);
+            auto min_val = *min_element(dxyInit.begin(), dxyInit.end());
+            lbrst += min_val;
+        } else {
+            const int lr = max(0, t - W);
+            const int ur = min(Ylen - 1, t + W);
+            const double thisdxx = dxx[t - 1];
+            const int startIdx_lr = startIdx - lr + 1;
+            const int t_1 = t - 1;
+            const int idx = ur - lr - 1;
+
+            if (t + W <= Ylen - 1) {
+                for (int i = lr, row = 0; i < ur; ++i, row++) {
+                    const int prev_col = startIdx_lr + i;
+                    upperBounds[t][startIdx + row] = upperBounds[t_1][prev_col] + thisdxx;
+                }
+                for (int i = lr, row = 0; i < ur; ++i, row++) {
+                    const int prev_col = startIdx_lr + i;
+                    const double prev_lower = lowerBounds[t_1][prev_col];
+                    const double prev_upper = upperBounds[t_1][prev_col];
+                    if (prev_lower > thisdxx) {
+                        lowerBounds[t][startIdx + row] = prev_lower - thisdxx;
+                    } else {
+                        lowerBounds[t][startIdx + row] = (thisdxx < prev_upper) ? 0 : thisdxx - prev_upper;
+                    }
+                }
+                const double temp = distance(X[t], Y[ur]);
+                upperBounds[t][startIdx + idx + 1] = temp;
+                lowerBounds[t][startIdx + idx + 1] = temp;
+                auto begin = lowerBounds[t].begin() + startIdx;
+                auto end = begin + idx + 2;
+                lbrst += *min_element(begin, end);
+            } else {
+                for (int i = lr, row = 0; i < ur + 1; ++i, row++) {
+                    const int prev_col = startIdx_lr + i;
+                    upperBounds[t][startIdx + row] = upperBounds[t_1][prev_col] + thisdxx;
+                    const double prev_lower = lowerBounds[t_1][prev_col];
+                    lowerBounds[t][startIdx + row] = (prev_lower > thisdxx) ?
+                        prev_lower - thisdxx :
+                        (thisdxx < upperBounds[t_1][prev_col]) ? 0 : thisdxx - upperBounds[t_1][prev_col];
+                }
+                auto begin = lowerBounds[t].begin() + startIdx;
+                auto end = begin + idx + 2;
+                lbrst += *min_element(begin, end);
+            }
+        }
+
+        if (lb_can_early_stop(best_dist) && lbrst >= thresh_sq) {
+            return sqrt(lbrst);
+        }
+    }
+    return sqrt(lbrst);
 }
 
 double LB_TI(const vector<vector<double>>& X,const vector<vector<double>>& Y,int W,int P) {

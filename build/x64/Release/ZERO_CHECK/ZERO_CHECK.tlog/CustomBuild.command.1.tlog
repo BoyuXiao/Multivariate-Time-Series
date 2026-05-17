@@ -1,0 +1,10 @@
+^D:\360MOVEDATA\USERS\LENOVO\DESKTOP\MULTIVARIATE-TIME-SERIES\BUILD\CMAKEFILES\8F48DBFBE777C2823D814408A32CF0CA\GENERATE.STAMP.RULE
+setlocal
+D:\Qt\Tools\CMake_64\bin\cmake.exe -SD:/360MoveData/Users/lenovo/Desktop/Multivariate-Time-Series -BD:/360MoveData/Users/lenovo/Desktop/Multivariate-Time-Series/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/360MoveData/Users/lenovo/Desktop/Multivariate-Time-Series/build/TLB.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

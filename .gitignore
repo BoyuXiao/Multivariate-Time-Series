@@ -1,0 +1,10 @@
+# IDE 配置
+/.idea/
+/.vscode/
+
+# 本地实验输出与工具（不上传 GitHub）
+/figures/
+/paper/
+/res/
+/scripts/
+/tests/

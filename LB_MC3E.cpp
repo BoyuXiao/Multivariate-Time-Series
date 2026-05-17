@@ -6,7 +6,35 @@
 #include <fstream>
 #include <utility>
 #include "funcs.h"
+#include "lb_early.h"
 using namespace std;
+
+static bool mc3_lb_exceeds(double lb, int K, double best_dist) {
+    if (!lb_can_early_stop(best_dist)) {
+        return false;
+    }
+    return static_cast<double>(K) * lb >= lb_threshold_sq(best_dist);
+}
+
+/** LB_MC3 / LB_MC3E：统一为 sqrt(K * lb)，不再区分 K=2。 */
+static double mc3_finalize(double lb, int K) {
+    return sqrt(static_cast<double>(K) * lb);
+}
+
+static void mc3_scale_accumulator(double& lb, std::vector<double>& lb_record, int K) {
+    lb = static_cast<double>(K) * lb;
+    for (double& x : lb_record) {
+        x = static_cast<double>(K) * x;
+    }
+}
+
+/** lb 已乘 K 后与 best_dist 比较（用于 MC3E 后半段）。 */
+static bool mc3_scaled_lb_exceeds(double lb_scaled, double best_dist) {
+    if (!lb_can_early_stop(best_dist)) {
+        return false;
+    }
+    return lb_scaled >= lb_threshold_sq(best_dist);
+}
 
 // 优化版本
   pair<double,double> initializeT(std::vector<vector<Cell>>& T, std::pair<vector<double>,vector<double>>& Q, double L_mu_Q, double U_mu_Q, double L_sigma_Q, double U_sigma_Q, int lambda, int n,int start,int end) {
@@ -435,7 +463,7 @@ double EdgeDistE(const vector<double>& X, const vector<double>& V, double dNN,bo
 
 
 
-vector<vector<double>> Preprocessing_MC3E(vector<vector<double>>& Q,
+vector<vector<double>> Preprocessing_MC3(vector<vector<double>>& Q,
     vector<double>& mu_Q,vector<double>& sigma_Q,
     vector<double>& U_mu_Q,vector<double>& L_mu_Q,
     vector<double>& U_sigma_Q,vector<double>& L_sigma_Q,
@@ -511,7 +539,7 @@ vector<vector<double>> Preprocessing_MC3E(vector<vector<double>>& Q,
     return result;
 }
 
-double LB_MC3E(vector<vector<double>>& A,
+double LB_MC3(vector<vector<double>>& A,
     vector<double>& U_mu_Q,vector<double>& L_mu_Q,
     vector<double>& U_sigma_Q,vector<double>& L_sigma_Q,
     vector<double>& mu_A,vector<double>& sigma_A,
@@ -604,14 +632,11 @@ double LB_MC3E(vector<vector<double>>& A,
             lb += CenterDist2D(mu_A[i],sigma_A[i],L_mu_Q[i],U_mu_Q[i],L_sigma_Q[i],U_sigma_Q[i],T[i],intervalLength_mu[i],intervalLength_sigma[i],lambda,num[i]);
         }
     }
-      if (K==2) {
-          return sqrt(lb);
-      }
-    return sqrt(K*lb);
+    return mc3_finalize(lb, K);
 }
 
 
-double LB_GRAPH(vector<vector<double>>& A,vector<vector<double>>& Q,vector<vector<double>>& A_T,vector<vector<double>>& Q_T,
+double LB_MC3E(vector<vector<double>>& A,vector<vector<double>>& Q,vector<vector<double>>& A_T,vector<vector<double>>& Q_T,
     vector<double>& U_mu_Q,vector<double>& L_mu_Q,
     vector<double>& U_sigma_Q,vector<double>& L_sigma_Q,
     vector<double>& mu_A,vector<double>& sigma_A,
@@ -722,13 +747,7 @@ double LB_GRAPH(vector<vector<double>>& A,vector<vector<double>>& Q,vector<vecto
         }
         lb += lb_record[i];
     }
-      if (K!=2) {
-          lb = K*lb;
-          for (auto & x : lb_record) {
-              x=K*x;
-          }
-      }
-
+    mc3_scale_accumulator(lb, lb_record, K);
 
       // // //计算右侧空缺的点
       vector<double>max_val(m);
@@ -754,4 +773,256 @@ double LB_GRAPH(vector<vector<double>>& A,vector<vector<double>>& Q,vector<vecto
       }
 
       return sqrt(lb);
+}
+
+double LB_MC3_early(vector<vector<double>>& A,
+    vector<double>& U_mu_Q, vector<double>& L_mu_Q,
+    vector<double>& U_sigma_Q, vector<double>& L_sigma_Q,
+    vector<double>& mu_A, vector<double>& sigma_A,
+    vector<double>& Dbl, vector<double>& Dbr,
+    vector<double>& Dtl, vector<double>& Dtr,
+    vector<vector<vector<Cell>>>& T,
+    vector<double>& intervalLength_mu, vector<double>& intervalLength_sigma, vector<int>& num,
+    double best_dist) {
+    if (!lb_can_early_stop(best_dist)) {
+        return LB_MC3(A, U_mu_Q, L_mu_Q, U_sigma_Q, L_sigma_Q, mu_A, sigma_A,
+                      Dbl, Dbr, Dtl, Dtr, T, intervalLength_mu, intervalLength_sigma, num);
+    }
+
+    int m = static_cast<int>(A.size());
+    int K = static_cast<int>(A[0].size());
+    int lambda = 3;
+    double lb = 0.0;
+    vector<double> Ai(2);
+    vector<double> V(2);
+    double dNN;
+    vector<double> V_plus(2);
+    vector<double> V_minus(2);
+    double d_plus;
+    double d_minus;
+    bool MiddleLeftOrRight = false;
+    bool TopOrBottomMiddle = false;
+
+    for (int i = 0; i < m; ++i) {
+        Ai = {mu_A[i], sigma_A[i]};
+        if (Ai[0] < L_mu_Q[i] && Ai[1] < L_sigma_Q[i]) {
+            V = {L_mu_Q[i], L_sigma_Q[i]};
+            dNN = Dbl[i];
+            lb += CornerDistE(Ai, V, dNN);
+        } else if (Ai[0] > U_mu_Q[i] && Ai[1] < L_sigma_Q[i]) {
+            V = {U_mu_Q[i], L_sigma_Q[i]};
+            dNN = Dbr[i];
+            lb += CornerDistE(Ai, V, dNN);
+        } else if (Ai[0] < L_mu_Q[i] && Ai[1] > U_sigma_Q[i]) {
+            V = {L_mu_Q[i], U_sigma_Q[i]};
+            dNN = Dtl[i];
+            lb += CornerDistE(Ai, V, dNN);
+        } else if (Ai[0] > U_mu_Q[i] && Ai[1] > U_sigma_Q[i]) {
+            V = {U_mu_Q[i], U_sigma_Q[i]};
+            dNN = Dtr[i];
+            lb += CornerDistE(Ai, V, dNN);
+        } else if (Ai[0] <= L_mu_Q[i] && L_sigma_Q[i] <= Ai[1] && Ai[1] <= U_sigma_Q[i]) {
+            V_plus = {L_mu_Q[i], L_sigma_Q[i]};
+            V_minus = {L_mu_Q[i], U_sigma_Q[i]};
+            d_plus = Dbl[i];
+            d_minus = Dtl[i];
+            MiddleLeftOrRight = true;
+            TopOrBottomMiddle = false;
+            double delta_plus = EdgeDistE(Ai, V_plus, d_plus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            double delta_minus = EdgeDistE(Ai, V_minus, d_minus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            lb += MIN(delta_plus, delta_minus);
+        } else if (Ai[0] >= U_mu_Q[i] && L_sigma_Q[i] <= Ai[1] && Ai[1] <= U_sigma_Q[i]) {
+            V_plus = {U_mu_Q[i], L_sigma_Q[i]};
+            V_minus = {U_mu_Q[i], U_sigma_Q[i]};
+            d_plus = Dbr[i];
+            d_minus = Dtr[i];
+            MiddleLeftOrRight = true;
+            TopOrBottomMiddle = false;
+            double delta_plus = EdgeDistE(Ai, V_plus, d_plus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            double delta_minus = EdgeDistE(Ai, V_minus, d_minus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            lb += MIN(delta_plus, delta_minus);
+        } else if (L_mu_Q[i] <= Ai[0] && Ai[0] <= U_mu_Q[i] && Ai[1] <= L_sigma_Q[i]) {
+            V_plus = {L_mu_Q[i], L_sigma_Q[i]};
+            V_minus = {U_mu_Q[i], L_sigma_Q[i]};
+            d_plus = Dbl[i];
+            d_minus = Dbr[i];
+            MiddleLeftOrRight = false;
+            TopOrBottomMiddle = true;
+            double delta_plus = EdgeDistE(Ai, V_plus, d_plus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            double delta_minus = EdgeDistE(Ai, V_minus, d_minus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            lb += MIN(delta_plus, delta_minus);
+        } else if (L_mu_Q[i] <= Ai[0] && Ai[0] <= U_mu_Q[i] && Ai[1] >= U_sigma_Q[i]) {
+            V_plus = {L_mu_Q[i], U_sigma_Q[i]};
+            V_minus = {U_mu_Q[i], U_sigma_Q[i]};
+            d_plus = Dtl[i];
+            d_minus = Dtr[i];
+            MiddleLeftOrRight = false;
+            TopOrBottomMiddle = true;
+            double delta_plus = EdgeDistE(Ai, V_plus, d_plus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            double delta_minus = EdgeDistE(Ai, V_minus, d_minus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            lb += MIN(delta_plus, delta_minus);
+        } else {
+            lb += CenterDist2D(mu_A[i], sigma_A[i], L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i],
+                T[i], intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+        }
+        if (mc3_lb_exceeds(lb, K, best_dist)) {
+            return mc3_finalize(lb, K);
+        }
+    }
+    return mc3_finalize(lb, K);
+}
+
+double LB_MC3E_early(vector<vector<double>>& A, vector<vector<double>>& Q, vector<vector<double>>& A_T,
+    vector<vector<double>>& Q_T,
+    vector<double>& U_mu_Q, vector<double>& L_mu_Q,
+    vector<double>& U_sigma_Q, vector<double>& L_sigma_Q,
+    vector<double>& mu_A, vector<double>& sigma_A,
+    vector<double>& Dbl, vector<double>& Dbr,
+    vector<double>& Dtl, vector<double>& Dtr,
+    vector<vector<vector<Cell>>>& T,
+    vector<double>& intervalLength_mu, vector<double>& intervalLength_sigma, vector<int>& num,
+    vector<double>& lb_record, int r, double best_dist) {
+    if (!lb_can_early_stop(best_dist)) {
+        return LB_MC3E(A, Q, A_T, Q_T, U_mu_Q, L_mu_Q, U_sigma_Q, L_sigma_Q, mu_A, sigma_A,
+            Dbl, Dbr, Dtl, Dtr, T, intervalLength_mu, intervalLength_sigma, num, lb_record, r);
+    }
+
+    int m = static_cast<int>(A.size());
+    int K = static_cast<int>(A[0].size());
+    int lambda = 3;
+    double lb = 0.0;
+    vector<double> Ai(2);
+    vector<double> V(2);
+    double dNN;
+    vector<double> V_plus(2);
+    vector<double> V_minus(2);
+    double d_plus;
+    double d_minus;
+    bool MiddleLeftOrRight = false;
+    bool TopOrBottomMiddle = false;
+    vector<double> A_L(m), A_U(m);
+
+    for (int i = 0; i < m; ++i) {
+        Ai = {mu_A[i], sigma_A[i]};
+        if (Ai[0] < L_mu_Q[i] && Ai[1] < L_sigma_Q[i]) {
+            V = {L_mu_Q[i], L_sigma_Q[i]};
+            dNN = Dbl[i];
+            lb_record[i] = CornerDistE(Ai, V, dNN);
+        } else if (Ai[0] > U_mu_Q[i] && Ai[1] < L_sigma_Q[i]) {
+            V = {U_mu_Q[i], L_sigma_Q[i]};
+            dNN = Dbr[i];
+            lb_record[i] = CornerDistE(Ai, V, dNN);
+        } else if (Ai[0] < L_mu_Q[i] && Ai[1] > U_sigma_Q[i]) {
+            V = {L_mu_Q[i], U_sigma_Q[i]};
+            dNN = Dtl[i];
+            lb_record[i] = CornerDistE(Ai, V, dNN);
+        } else if (Ai[0] > U_mu_Q[i] && Ai[1] > U_sigma_Q[i]) {
+            V = {U_mu_Q[i], U_sigma_Q[i]};
+            dNN = Dtr[i];
+            lb_record[i] = CornerDistE(Ai, V, dNN);
+        } else if (Ai[0] <= L_mu_Q[i] && L_sigma_Q[i] <= Ai[1] && Ai[1] <= U_sigma_Q[i]) {
+            V_plus = {L_mu_Q[i], L_sigma_Q[i]};
+            V_minus = {L_mu_Q[i], U_sigma_Q[i]};
+            d_plus = Dbl[i];
+            d_minus = Dtl[i];
+            MiddleLeftOrRight = true;
+            TopOrBottomMiddle = false;
+            double delta_plus = EdgeDistE(Ai, V_plus, d_plus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            double delta_minus = EdgeDistE(Ai, V_minus, d_minus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            lb_record[i] = MIN(delta_plus, delta_minus);
+        } else if (Ai[0] >= U_mu_Q[i] && L_sigma_Q[i] <= Ai[1] && Ai[1] <= U_sigma_Q[i]) {
+            V_plus = {U_mu_Q[i], L_sigma_Q[i]};
+            V_minus = {U_mu_Q[i], U_sigma_Q[i]};
+            d_plus = Dbr[i];
+            d_minus = Dtr[i];
+            MiddleLeftOrRight = true;
+            TopOrBottomMiddle = false;
+            double delta_plus = EdgeDistE(Ai, V_plus, d_plus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            double delta_minus = EdgeDistE(Ai, V_minus, d_minus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            lb_record[i] = MIN(delta_plus, delta_minus);
+        } else if (L_mu_Q[i] <= Ai[0] && Ai[0] <= U_mu_Q[i] && Ai[1] <= L_sigma_Q[i]) {
+            V_plus = {L_mu_Q[i], L_sigma_Q[i]};
+            V_minus = {U_mu_Q[i], L_sigma_Q[i]};
+            d_plus = Dbl[i];
+            d_minus = Dbr[i];
+            MiddleLeftOrRight = false;
+            TopOrBottomMiddle = true;
+            double delta_plus = EdgeDistE(Ai, V_plus, d_plus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            double delta_minus = EdgeDistE(Ai, V_minus, d_minus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            lb_record[i] = MIN(delta_plus, delta_minus);
+        } else if (L_mu_Q[i] <= Ai[0] && Ai[0] <= U_mu_Q[i] && Ai[1] >= U_sigma_Q[i]) {
+            V_plus = {L_mu_Q[i], U_sigma_Q[i]};
+            V_minus = {U_mu_Q[i], U_sigma_Q[i]};
+            d_plus = Dtl[i];
+            d_minus = Dtr[i];
+            MiddleLeftOrRight = false;
+            TopOrBottomMiddle = true;
+            double delta_plus = EdgeDistE(Ai, V_plus, d_plus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            double delta_minus = EdgeDistE(Ai, V_minus, d_minus, MiddleLeftOrRight, TopOrBottomMiddle,
+                L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i], T[i],
+                intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+            lb_record[i] = MIN(delta_plus, delta_minus);
+        } else {
+            lb_record[i] = CenterDist2D(mu_A[i], sigma_A[i], L_mu_Q[i], U_mu_Q[i], L_sigma_Q[i], U_sigma_Q[i],
+                T[i], intervalLength_mu[i], intervalLength_sigma[i], lambda, num[i]);
+        }
+        lb += lb_record[i];
+        if (mc3_lb_exceeds(lb, K, best_dist)) {
+            return mc3_finalize(lb, K);
+        }
+    }
+
+    mc3_scale_accumulator(lb, lb_record, K);
+
+    vector<double> max_val(m);
+    upper_lemire(lb_record, m, r, max_val);
+    vector<double> mv_right(m, 0);
+    for (int k = 0; k < K; k++) {
+        lower_upper_lemire(A_T[k], m, r, A_L, A_U);
+        for (int i = 0; i < m; i++) {
+            if (Q_T[k][i] < A_L[i]) {
+                mv_right[i] += dist(Q_T[k][i], A_L[i]);
+            } else if (Q_T[k][i] > A_U[i]) {
+                mv_right[i] += dist(Q_T[k][i], A_U[i]);
+            }
+        }
+    }
+
+    for (int i = 0; i < m; i++) {
+        lb += MAX(0.0, mv_right[i] - max_val[i]);
+        if (mc3_scaled_lb_exceeds(lb, best_dist)) {
+            return sqrt(lb);
+        }
+    }
+    return sqrt(lb);
 }

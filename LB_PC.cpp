@@ -7,11 +7,12 @@
 #include "funcs.h"
 #include <map>
 #include <numeric>
+#include <sstream>
 
 double getLB_oneQR(const vector<vector<double>>& Q,
                   const vector<vector<double>>& R,
                   const vector<vector<vector<vector<double>>>>& bboxes,
-                  double dist) {
+                  double best_dist) {
 
     double LB_sum = 0;
     const int dim = Q[0].size(); // 获取维度
@@ -48,7 +49,7 @@ double getLB_oneQR(const vector<vector<double>>& Q,
         LB_sum += *min_element(bounds.begin(), bounds.end());
 
         // 提前终止检查
-        if(sqrt(LB_sum) >= dist) {
+        if(sqrt(LB_sum) >= best_dist) {
             return sqrt(LB_sum);
         }
     }
@@ -283,6 +284,13 @@ vector<vector<vector<vector<double>>>> LB_PC_Preprocess(
     }
 
     return bboxes;
+}
+
+double LB_PC_early(const vector<vector<double>>& Q,
+                   const vector<vector<double>>& R,
+                   vector<vector<vector<vector<double>>>>& bboxes,
+                   double best_dist) {
+    return getLB_oneQR(Q, R, bboxes, best_dist);
 }
 
 double LB_PC(const vector<vector<double>>& Q,

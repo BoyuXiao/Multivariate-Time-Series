@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\360MoveData\Users\lenovo\Desktop\Multivariate-Time-Series\build\CMakeFiles\8f48dbfbe777c2823d814408a32cf0ca\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{FBF6A73D-7C89-36C1-BA53-398F956894A5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
